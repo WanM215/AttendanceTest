@@ -100,7 +100,7 @@ if(isset($_POST['save'])){
 
   if (isset($_GET['id']) && isset($_GET['course_id']) && isset($_GET['action']) && $_GET['action'] == "delete")
 	{
-        $Id= $_GET['id'];
+        $id= $_GET['id'];
         $course_id= $_GET['course_id'];
 
         $query = mysqli_query($conn,"DELETE FROM tblteacher WHERE id='$id'");
