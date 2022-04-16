@@ -29,7 +29,8 @@
     </nav>
     <div class="container">
         <h1 style="font-family: Amaranth, sans-serif;">Hello and Welcome</h1>
-        <p>You have logged in at:</p>
+        <p>You have logged in at: <?php print date("d/m/y g.i a", time()); ?></p>
+        
     </div>
     <div class="container" id="Opening">
         <div class="simple-slider">
