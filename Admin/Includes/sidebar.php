@@ -106,7 +106,7 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrapcon"
           aria-expanded="true" aria-controls="collapseBootstrapcon">
           <i class="fa fa-calendar-alt"></i>
-          <span>Manage Semester & Term</span>
+          <span>Manage Sem & Term</span>
         </a>
         <div id="collapseBootstrapcon" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
