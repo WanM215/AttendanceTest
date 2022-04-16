@@ -50,7 +50,7 @@
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-12">
-                    <p class="footer-copyright" style="font-family: Amaranth, sans-serif;">© 2016 LCB College ~ Designed By &nbsp;<a href="#">Wan Murtadha Wan Alwi</a></p>
+                    <p class="footer-copyright" style="font-family: Amaranth, sans-serif;">© 2022 LCB College ~ Designed By &nbsp;<a href="#">Wan Murtadha Wan Alwi</a></p>
                 </div>
                 <div class="col footer-social"><a class="social-icons" href="#"><i class="fa fa-facebook"></i></a><a class="social-icons" href="#"><i class="fa fa-instagram"></i></a><a class="social-icons" href="#"><i class="fa fa-twitter"></i></a><a class="social-icons" href="#"><i class="fa fa-linkedin"></i></a></div>
             </div>
