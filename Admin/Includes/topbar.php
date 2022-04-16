@@ -59,6 +59,10 @@
                   <i class="fas fa-power-off fa-fw mr-2 text-danger"></i>
                   Logout
                 </a>
+                <a class="dropdown-item" href="addAdmin.php">
+                  <i class="fas fa-power-off fa-fw mr-2 text-danger"></i>
+                  New Admin
+                </a>
               </div>
             </li>
           </ul>
