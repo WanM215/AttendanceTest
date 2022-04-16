@@ -93,7 +93,7 @@ if(isset($_POST['save'])){
 
   if (isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == "delete")
 	{
-        $Id= $_GET['id'];
+        $id= $_GET['id'];
         $course_id= $_GET['course_id'];
 
         $query = mysqli_query($conn,"DELETE FROM tblstudents WHERE id='$id'");
@@ -309,8 +309,8 @@ if(isset($_POST['save'])){
                                 <td>".$rows['programme_name']."</td>
                                 <td>".$rows['course_name']."</td>
                                  <td>".$rows['dateCreated']."</td>
-                                <td><a href='?action=edit&Id=".$rows['id']."'><i class='fas fa-fw fa-edit'></i></a></td>
-                                <td><a href='?action=delete&Id=".$rows['id']."'><i class='fas fa-fw fa-trash'></i></a></td>
+                                <td><a href='?action=edit&id=".$rows['id']."'><i class='fas fa-fw fa-edit'></i></a></td>
+                                <td><a href='?action=delete&id=".$rows['id']."'><i class='fas fa-fw fa-trash'></i></a></td>
                               </tr>";
                           }
                       }
