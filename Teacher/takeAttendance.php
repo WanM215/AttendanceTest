@@ -20,7 +20,7 @@ include '../Includes/Session.php';
 
         $dateTaken = date("Y-m-d");
 
-        $qurty=mysqli_query($conn,"select * from tblattendance  where programme_id = '$_SESSION[programme_id]' and course_id = '$_SESSION[course_id]' and date='$dateTaken'");
+        $qurty=mysqli_query($conn,"select * from tblattendance  where programme_id = '$_SESSION[programme_id]' and course_id = '$_SESSION[course_id]' and dateTimeTaken='$dateTaken'");
         $count = mysqli_num_rows($qurty);
 
         if($count == 0){ //if Record does not exsit, insert the new record
@@ -29,7 +29,7 @@ include '../Includes/Session.php';
           $qus=mysqli_query($conn,"select * from tblstudents  where programme_id = '$_SESSION[programme_id]' and course_id = '$_SESSION[course_id]'");
           while ($ros = $qus->fetch_assoc())
           {
-              $qquery=mysqli_query($conn,"insert into tblattendance(admissionNo,programme_id,course_id,semester_id,status,date) 
+              $qquery=mysqli_query($conn,"insert into tblattendance(admissionNo,programme_id,course_id,semester_id,status,dateTimeTaken) 
               value('$ros[admissionNumber]','$_SESSION[programme_id]','$_SESSION[course_id]','$semester_id','0','$dateTaken')");
 
           }
@@ -50,7 +50,7 @@ if(isset($_POST['save'])){
 
 
 //check if the attendance has not been taken i.e if no record has a status of 1
-  $qurty=mysqli_query($conn,"select * from tblattendance  where programme_id = '$_SESSION[programme_id]' and course_id = '$_SESSION[course_id]' and date='$dateTaken' and status = '1'");
+  $qurty=mysqli_query($conn,"select * from tblattendance  where programme_id = '$_SESSION[programme_id]' and course_id = '$_SESSION[course_id]' and dateTimeTaken='$dateTaken' and status = '1'");
   $count = mysqli_num_rows($qurty);
 
   if($count > 0){

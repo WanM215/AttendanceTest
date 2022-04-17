@@ -130,7 +130,7 @@ include '../Includes/Session.php';
               <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Class Attendance</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Attendance</h6>
                 </div>
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush table-hover" id="dataTableHover">
@@ -161,7 +161,7 @@ include '../Includes/Session.php';
 
                        if($type == "1"){ //All Attendance
 
-                        $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.date,tblprogramme.programme_name,
+                        $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.dateTimeTaken,tblprogramme.programme_name,
                         tblcourse.course_name,tblsemester.semester_name,tblsemester.term_id,tblterm.term_name,
                         tblstudents.fullname,tblstudents.username,tblstudents.email,tblstudents.admissionNumber
                         FROM tblattendance
@@ -177,7 +177,7 @@ include '../Includes/Session.php';
 
                         $singleDate =  $_POST['singleDate'];
 
-                         $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.date,tblprogramme.programme_name,
+                         $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.dateTimeTaken,tblprogramme.programme_name,
                         tblcourse.course_name,tblsemester.semester_name,tblsemester.term_id,tblterm.term_name,
                         tblstudents.fullname,tblstudents.username,tblstudents.email,tblstudents.admissionNumber
                         FROM tblattendance
@@ -186,7 +186,7 @@ include '../Includes/Session.php';
                         INNER JOIN tblsemester ON tblsemester.id = tblattendance.semester_id
                         INNER JOIN tblterm ON tblterm.id = tblsemester.term_id
                         INNER JOIN tblstudents ON tblstudents.admissionNumber = tblattendance.admissionNo
-                        where tblattendance.date = '$singleDate' and tblattendance.admissionNo = '$admissionNumber' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
+                        where tblattendance.dateTimeTaken = '$singleDate' and tblattendance.admissionNo = '$admissionNumber' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
                         
 
                        }
@@ -195,7 +195,7 @@ include '../Includes/Session.php';
                          $fromDate =  $_POST['fromDate'];
                          $toDate =  $_POST['toDate'];
 
-                         $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.date,tblprogramme.programme_name,
+                         $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.dateTimeTaken,tblprogramme.programme_name,
                         tblcourse.course_name,tblsemester.semester_name,tblsemester.term_id,tblterm.term_name,
                         tblstudents.fullname,tblstudents.username,tblstudents.email,tblstudents.admissionNumber
                         FROM tblattendance
@@ -204,7 +204,7 @@ include '../Includes/Session.php';
                         INNER JOIN tblsemester ON tblsemester.id = tblattendance.semester_id
                         INNER JOIN tblterm ON tblterm.id = tblsemester.term_id
                         INNER JOIN tblstudents ON tblstudents.admissionNumber = tblattendance.admissionNo
-                        where tblattendance.date between '$fromDate' and '$toDate' and tblattendance.admissionNo = '$admissionNumber' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
+                        where tblattendance.dateTime Takne between '$fromDate' and '$toDate' and tblattendance.admissionNo = '$admissionNumber' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
                         
                        }
 
@@ -230,7 +230,7 @@ include '../Includes/Session.php';
                                 <td>".$rows['semester_name']."</td>
                                 <td>".$rows['term_name']."</td>
                                 <td style='background-color:".$colour."'>".$status."</td>
-                                <td>".$rows['date']."</td>
+                                <td>".$rows['dateTimeTaken']."</td>
                               </tr>";
                           }
                       }
