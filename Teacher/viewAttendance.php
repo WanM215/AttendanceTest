@@ -1,5 +1,4 @@
 
-
 <?php 
 error_reporting(0);
 include '../Includes/Database.php';
@@ -59,11 +58,11 @@ include '../Includes/Session.php';
                     <div class="form-group row mb-3">
                         <div class="col-xl-6">
                         <label class="form-control-label">Select Date<span class="text-danger ml-2">*</span></label>
-                            <input type="date" class="form-control" name="dateTaken" id="exampleInputFirstName" placeholder="Date">
+                            <input type="date" class="form-control" name="dateTaken" id="exampleInputFirstName" placeholder="Course Name">
                         </div>
                         <!-- <div class="col-xl-6">
-                        <label class="form-control-label">Class Arm Name<span class="text-danger ml-2">*</span></label>
-                      <input type="text" class="form-control" name="classArmName" value="<?php echo $row['course_name'];?>" id="exampleInputFirstName" placeholder="Class Arm Name">
+                        <label class="form-control-label">Course Name<span class="text-danger ml-2">*</span></label>
+                      <input type="text" class="form-control" name="course_name" value="<?php echo $row['course_name'];?>" id="exampleInputFirstName" placeholder="Class Arm Name">
                         </div> -->
                     </div>
                     <button type="submit" name="view" class="btn btn-primary">View Attendance</button>
@@ -76,7 +75,7 @@ include '../Includes/Session.php';
               <div class="col-lg-12">
               <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Class Attendance</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Attendance</h6>
                 </div>
                 <div class="table-responsive p-3">
                   <table class="table align-items-center table-flush table-hover" id="dataTableHover">
@@ -104,7 +103,7 @@ include '../Includes/Session.php';
 
                       $dateTaken =  $_POST['dateTaken'];
 
-                      $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.date,tblprogramme.programme_name,
+                      $query = "SELECT tblattendance.id,tblattendance.status,tblattendance.dateTimeTaken,tblprogramme.programme_name,
                       tblcourse.course_name,tblsemester.semester_name,tblsemester.term_id,tblterm.term_name,
                       tblstudents.fullname,tblstudents.username,tblstudents.email,tblstudents.admissionNumber
                       FROM tblattendance
@@ -113,7 +112,7 @@ include '../Includes/Session.php';
                       INNER JOIN tblsemester ON tblsemester.id = tblattendance.semester_id
                       INNER JOIN tblterm ON tblterm.id = tblsemester.term_id
                       INNER JOIN tblstudents ON tblstudents.admissionNumber = tblattendance.admissionNo
-                      where tblattendance.date = '$dateTaken' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
+                      where tblattendance.dateTimeTaken = '$dateTaken' and tblattendance.programme_id = '$_SESSION[programme_id]' and tblattendance.course_id = '$_SESSION[course_id]'";
                       $rs = $conn->query($query);
                       $num = $rs->num_rows;
                       $sn=0;
@@ -136,7 +135,7 @@ include '../Includes/Session.php';
                                 <td>".$rows['semester_name']."</td>
                                 <td>".$rows['term_name']."</td>
                                 <td style='background-color:".$colour."'>".$status."</td>
-                                <td>".$rows['date']."</td>
+                                <td>".$rows['dateTimeTaken']."</td>
                               </tr>";
                           }
                       }
