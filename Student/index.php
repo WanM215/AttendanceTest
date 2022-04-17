@@ -1,3 +1,17 @@
+<?php 
+
+error_reporting(0);
+include '../Includes/Database.php';
+include '../Includes/Session.php';
+
+  $query = "SELECT * FROM tblstudents WHERE id = ".$_SESSION['user_id']."";
+  $rs = $conn->query($query);
+  $num = $rs->num_rows;
+  $rows = $rs->fetch_assoc();
+  $fullName = $rows['fullname'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +42,7 @@
         </div>
     </nav>
     <div class="container">
-        <h1 style="font-family: Amaranth, sans-serif;">Hello and Welcome</h1>
+        <h1 style="font-family: Amaranth, sans-serif;">Hello and Welcome <?php echo $fullName;?></h1>
         <p>You have logged in at: <?php print date("d/m/y g.i a", time()); ?></p>
         
     </div>
