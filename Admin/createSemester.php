@@ -132,7 +132,7 @@ if(isset($_POST['save'])){
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head> 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -189,7 +189,7 @@ if(isset($_POST['save'])){
                         $num = $result->num_rows;		
                         if ($num > 0){
                           echo ' <select required name="term_id" class="form-control mb-3">';
-                          echo'<option value="">--Select Tern--</option>';
+                          echo'<option value="">--Select Term--</option>';
                           while ($rows = $result->fetch_assoc()){
                           echo'<option value="'.$rows['id'].'" >'.$rows['term_name'].'</option>';
                               }
