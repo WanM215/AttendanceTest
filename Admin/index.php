@@ -126,12 +126,38 @@ $course = mysqli_num_rows($query1);
                 </div>
               </div>
             </div>
+
+
+            <!-- Class Card  -->
+            <?php 
+            $query1=mysqli_query($conn,"SELECT * from tblattendance");                       
+            $class = mysqli_num_rows($query1);
+            ?>
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-uppercase mb-1">Classes</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $class;?></div>
+                      <div class="mt-2 mb-0 text-muted text-xs">
+                        <!-- <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                        <span>Since yesterday</span> -->
+                      </div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-home fa-2x text-secondary"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <!-- Std Att Card  -->
             <?php 
-$query1=mysqli_query($conn,"SELECT * from tblattendance");                       
-$totAttendance = mysqli_num_rows($query1);
-?>
+            $query1=mysqli_query($conn,"SELECT * from tblattendance");                       
+            $totAttendance = mysqli_num_rows($query1);
+            ?>
             <div class="col-xl-3 col-md-6 mb-4">
               <div class="card h-100">
                 <div class="card-body">
@@ -162,7 +188,7 @@ $totAttendance = mysqli_num_rows($query1);
                             <div class="card-body">
                               <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
-                                  <div class="text-xs font-weight-bold text-uppercase mb-1">Ledturers</div>
+                                  <div class="text-xs font-weight-bold text-uppercase mb-1">Lecturers</div>
                                   <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $Teacher;?></div>
                                   <div class="mt-2 mb-0 text-muted text-xs">
                                     <!-- <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>

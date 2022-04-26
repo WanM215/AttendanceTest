@@ -47,13 +47,12 @@
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBootstrapschemes"
           aria-expanded="true" aria-controls="collapseBootstrapschemes">
           <i class="fas fa-home"></i>
-          <span>Manage Schemes</span>
+          <span>Manage Class</span>
         </a>
         <div id="collapseBootstrapschemes" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Manage Schemes</h6>
-             <a class="collapse-item" href="createSchemes.php">Create Scheme</a>
-            <a class="collapse-item" href="schemeList.php">Scheme List</a>
+            <h6 class="collapse-header">Manage Class</h6>
+             <a class="collapse-item" href="createSchemes.php">Create Class</a>
           </div>
         </div>
       </li>
