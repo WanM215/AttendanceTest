@@ -241,6 +241,17 @@ if(isset($_POST['save'])){
                             ?>
                         </div>
                     </div>
+
+                    <div class="form-group row mb-3">
+                        <div class="col-xl-6">
+                        <label class="form-control-label">Course<span class="text-danger ml-2">*</span></label>
+                            <?php
+                                echo"<div id='txtHint'></div>";
+                            ?>
+                        </div>
+                    </div>
+
+
                       <?php
                     if (isset($id))
                     {

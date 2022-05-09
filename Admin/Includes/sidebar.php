@@ -52,7 +52,7 @@
         <div id="collapseBootstrapschemes" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Manage Class</h6>
-             <a class="collapse-item" href="createSchemes.php">Create Class</a>
+             <a class="collapse-item" href="createClass.php">Create Class</a>
           </div>
         </div>
       </li>

@@ -14,5 +14,6 @@ include '../Includes/Database.php';
         echo'<option value="'.$row['id'].'" >'.$row['course_name'].'</option>';
         }
         echo '</select>';
+        
 ?>
 
