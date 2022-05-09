@@ -109,7 +109,7 @@ if (isset($_GET['id']) && isset($_GET['action']) && $_GET['action'] == "delete")
 <?php include 'includes/title.php';?>
   <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="css/ruang-admin.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
